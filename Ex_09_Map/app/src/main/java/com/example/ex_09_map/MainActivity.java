@@ -308,17 +308,22 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
+    float bearing = 0f;
+
     boolean firstChk = true;
 
     void setLastLocation(Location loc) {
         if (firstChk) {
-            firstChk = false;
+//            firstChk = false;
+            bearing += 5;
 
             //                             위도               경도
             LatLng latLng = new LatLng(loc.getLatitude(), loc.getLongitude());
 
             CameraPosition camPos = new CameraPosition.Builder()
                     .target(latLng)
+                    .tilt(30f)
+                    .bearing(bearing)
                     .zoom(15f)
                     .build();
 

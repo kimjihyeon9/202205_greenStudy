@@ -1,8 +1,11 @@
 package com.example.ex_09_map;
 
 import android.location.Location;
+import android.util.Log;
 
 import com.google.android.gms.maps.model.LatLng;
+
+import java.util.Arrays;
 
 public class MyPlace {
     String title;
@@ -20,12 +23,14 @@ public class MyPlace {
         this.color = color;
     }
 
-    int rate = 5;
+    int rate = 10;
     void setArPosition(Location currentLoaction, float [] mePos){
         arPos = new double[]{
-                (mePos[0] + currentLoaction.getLongitude() - longitute) * rate,
-                (mePos[1] + currentLoaction.getLatitude() - latitude) * rate,
-                mePos[2]
+                mePos[0] + (currentLoaction.getLongitude() - longitute) * rate,
+                mePos[1] + (currentLoaction.getLatitude() - latitude) * rate,
+                mePos[2] * 3
         };
+        Log.d("내 좌표", Arrays.toString(mePos));
+        Log.d("큐브 좌표", Arrays.toString(arPos));
     }
 }

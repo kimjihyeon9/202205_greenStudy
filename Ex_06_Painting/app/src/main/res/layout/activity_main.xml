@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/glsurfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:text="스크린에 그리기"
+        android:textSize="34sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        >
+
+        <Button
+            android:id="@+id/btn_Red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:backgroundTint="#FF8787"
+            android:textStyle="bold"
+            android:text="빨강" />
+
+        <Button
+            android:id="@+id/btn_Green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:backgroundTint="#8BC34A"
+            android:textStyle="bold"
+            android:text="초록" />
+
+        <Button
+            android:id="@+id/btn_Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:backgroundTint="#87D7FF"
+            android:textStyle="bold"
+            android:text="파랑" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:onClick="removeBtnGo"
+            android:backgroundTint="#000000"
+            android:textStyle="bold"
+            android:text="삭제" />
+
+    </LinearLayout>
+
+</FrameLayout>
